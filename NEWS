@@ -1,5 +1,113 @@
 # Releases
 
+## GrimoireLab 1.19.0 - (2026-01-21)
+
+**New components:**
+
+* grimoirelab-toolkit 1.2.5
+* kidash 1.1.6
+* sortinghat 1.13.0
+* cereslib 1.1.6
+* perceval 1.4.5
+* perceval-mozilla 1.2.6
+* perceval-opnfv 1.1.6
+* perceval-puppet 1.1.6
+* perceval-weblate 1.1.6
+* graal 1.2.6
+* grimoire-elk 1.7.0
+* sirmordred 1.2.6
+
+The following list describes the changes by component:
+
+### grimoirelab-toolkit
+
+No changes list available.
+
+### kidash
+  
+  * Update Poetry's package dependencies
+
+### sortinghat
+
+**New features:**
+
+ * Redis SSL support via environment variables (#985)\
+   Adds support for secure Redis connections over SSL. It can be
+   configured using the following environment variables.
+   SORTINGHAT_REDIS_SSL, SORTINGHAT_REDIS_SSL_CERT_REQS,
+   SORTINGHAT_REDIS_SSL_CA_CERTS, SORTINGHAT_REDIS_SSL_CERTFILE,
+   SORTINGHAT_REDIS_SSL_KEYFILE.
+
+**Bug fixes:**
+
+ * Last run of scheduled tasks (#1018)\
+   The information about the last run of scheduled tasks on the user
+   interface was not coherent when there was more than one 'affiliate'
+   and 'unify' task. Now, the system only allows to schedule one
+   recurrent task of each of those types and the user interface shows the
+   correct date.
+ * Reopen "Add organization" modal after closing it (#1023)\
+   The "Add organization" dialog would not open again after closing it by
+   clicking outside of it.
+ * Auto fill login details with password managers (#1034)\
+   Some password managers were unable to auto fill the login form.
+ * Show errors when the tables are not empty\
+   The user interface did not show any error messages when the
+   individuals and organizations tables had items.
+
+**Performance improvements:**
+
+ * Faster loading times for the list of individuals\
+   Improve the performance of the individuals query, reducing the loading
+   time of the table.
+
+### cereslib
+  
+  * Update Poetry's package dependencies
+
+### perceval
+  
+  * Update Poetry's package dependencies
+
+### perceval-mozilla
+  
+  * Update Poetry's package dependencies
+
+### perceval-opnfv
+  
+  * Update Poetry's package dependencies
+
+### perceval-puppet
+  
+  * Update Poetry's package dependencies
+
+### perceval-weblate
+  
+  * Update Poetry's package dependencies
+
+### graal
+  
+  * Update Poetry's package dependencies
+
+### grimoire-elk
+
+**New features:**
+
+ * Onion study output index naming update\
+   The Onion study now uses date based index names, ensuring previous
+   data remains available while a new study runs or if it fails.
+
+**Bug fixes:**
+
+ * Unique BugzillaREST ids\
+   Bugzilla IDs now include a prefix to ensure uniqueness and avoid
+   conflicts across item types.
+
+### sirmordred
+  
+  * Update Poetry's package dependencies
+
+
 ## GrimoireLab 1.18.1 - (2025-12-12)
 
 **New components:**
